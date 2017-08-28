@@ -11,5 +11,6 @@ class PlayersController extends Controller
     public function getPlayers()
     {
        return Player::where('points','>',0)->orderBy('points','desc')->get()->toArray();
+       
     }
 }
